@@ -21,19 +21,9 @@ namespace Seleno
                 .Navigate()
                 .GoToUrl(BrowserHost.RootUrl);
 
-            var firstNameBox = BrowserHost.Instance.Application.Browser.FindElement(By.Id("UserName"));
-            firstNameBox.SendKeys("karensouthwick");
+            var signUpPage = BrowserHost.Instance.NavigateToInitialPage<LogInPage>().GoToSignUpPage();
 
-            var passwordBox = BrowserHost.Instance.Application.Browser.FindElement(By.Id("Password"));
-            passwordBox.SendKeys("Exchange!6");
-
-            var loginBox = BrowserHost.Instance.Application.Browser.FindElement(By.Id("do-submit"));
-            loginBox.Click();
-
-            Thread.Sleep(3000);
-
-            var networkHeader = BrowserHost.Instance.Application.Browser.FindElement(By.Id("sel-network"));
-            Assert.That(networkHeader.Text, Is.EqualTo("Network"));
+            Assert.That(signUpPage.Url, Is.EqualTo("https://qa-platform.authenticateis.com/SignUp"));
            
         }
     }
