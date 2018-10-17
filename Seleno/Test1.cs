@@ -22,9 +22,11 @@ namespace Seleno
                 .GoToUrl(BrowserHost.RootUrl);
 
             var signUpPage = BrowserHost.Instance.NavigateToInitialPage<LogInPage>().GoToSignUpPage();
-
             Assert.That(signUpPage.Url, Is.EqualTo("https://qa-platform.authenticateis.com/SignUp"));
-           
+
+            var logInPage = BrowserHost.Instance.NavigateToInitialPage<LogInPage>();
+            Assert.That(logInPage.Url, Is.EqualTo("https://qa-platform.authenticateis.com/Account/Logon?ReturnUrl=%2f"));
+
         }
     }
 }

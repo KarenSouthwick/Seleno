@@ -8,11 +8,11 @@ using TestStack.Seleno.PageObjects.Locators;
 
 namespace Seleno
 {
-    public class LogInPage : Page
+    public class SignUpPage : Page
     {
-        public LogInPage GoToSignUpPage()
+        public SignUpPage GoToLogInPage()
         {
-            Find.Element(By.LinkText("register / sign up")).Click();
+            Find.Element(By.LinkText("Home")).Click();
 
             return this;
         }
