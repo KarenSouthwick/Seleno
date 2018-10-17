@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using TestStack.Seleno.PageObjects.Locators;
@@ -28,6 +29,11 @@ namespace Seleno
 
             var loginBox = BrowserHost.Instance.Application.Browser.FindElement(By.Id("do-submit"));
             loginBox.Click();
+
+            Thread.Sleep(3000);
+
+            var networkHeader = BrowserHost.Instance.Application.Browser.FindElement(By.Id("sel-network"));
+            Assert.That(networkHeader.Text, Is.EqualTo("Network"));
            
         }
     }
