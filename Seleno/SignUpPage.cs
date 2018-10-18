@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TestStack.Seleno.PageObjects;
 using TestStack.Seleno.PageObjects.Locators;
+using TestStack.Seleno.PageObjects;
 
 namespace Seleno
 {
     public class SignUpPage : Page
     {
-        public SignUpPage GoToLogInPage()
+        public LogInPage GoToLogInPage()
         {
-            Find.Element(By.LinkText("Home")).Click();
-
-            return this;
+            return Navigate.To<LogInPage>(By.LinkText("Home"));
         }
     }
 }

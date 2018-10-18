@@ -10,11 +10,9 @@ namespace Seleno
 {
     public class LogInPage : Page
     {
-        public LogInPage GoToSignUpPage()
+        public SignUpPage GoToSignUpPage()
         {
-            Find.Element(By.LinkText("register / sign up")).Click();
-
-            return this;
+            return Navigate.To<SignUpPage>(By.LinkText("register / sign up"));
         }
     }
 }
