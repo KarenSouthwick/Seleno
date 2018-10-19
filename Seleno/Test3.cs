@@ -18,7 +18,12 @@ namespace Seleno
         public void BootUpTest()
         {
             var logInPage = BrowserHost.Instance.NavigateToInitialPage<LogInPage>();
-            var homePage = logInPage.InputUserName("karensouthwick").BootUp();
+            var homePage = logInPage
+                .InputUserName("karensouthwick")
+                .InputPassword("Exchange!6")
+                .BootUp();
+
+            Thread.Sleep(3000);
         }
     }
 }

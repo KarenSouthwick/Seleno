@@ -19,7 +19,17 @@ namespace Seleno
         {
             Find.Element(By.Id("UserName"))
                 .SendKeys(term);
+
             return this;
+        }
+
+        public LogInPage InputPassword(string term)
+        {
+            Find.Element(By.Id("Password"))
+                .SendKeys(term);
+
+            return this;
+
         }
 
         public HomePage BootUp()
