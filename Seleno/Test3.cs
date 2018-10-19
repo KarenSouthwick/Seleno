@@ -11,18 +11,14 @@ namespace Seleno
 {
     [TestFixture]
 
-    public class Test2
+    public class Test3
     {
         [Test]
 
-        public void NavigateTest()
+        public void BootUpTest()
         {
             var logInPage = BrowserHost.Instance.NavigateToInitialPage<LogInPage>();
-            var signUpPage = logInPage.GoToSignUpPage();
-            var logInPage2 = signUpPage.GoToLogInPage();
-
-            Thread.Sleep(3000);
-
+            var homePage = logInPage.InputUserName("karensouthwick").BootUp();
         }
     }
 }

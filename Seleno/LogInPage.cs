@@ -14,5 +14,21 @@ namespace Seleno
         {
             return Navigate.To<SignUpPage>(By.LinkText("register / sign up"));
         }
+
+        public LogInPage InputUserName(string term)
+        {
+            Find.Element(By.Id("UserName"))
+                .SendKeys(term);
+            return this;
+        }
+
+        public HomePage BootUp()
+        {
+            return Navigate.To<HomePage>(By.Id("do-submit"));
+        }
+    }
+
+    public class HomePage : Page
+    {
     }
 }
