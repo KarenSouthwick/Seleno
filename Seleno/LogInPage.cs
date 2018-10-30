@@ -8,7 +8,7 @@ using TestStack.Seleno.PageObjects.Locators;
 
 namespace Seleno
 {
-    public class LogInPage : Page
+    public partial class LogInPage : Page
     {
         public SignUpPage GoToSignUpPage()
         {
@@ -38,7 +38,4 @@ namespace Seleno
         }
     }
 
-    public class HomePage : Page
-    {
-    }
 }

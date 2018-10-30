@@ -23,7 +23,7 @@ namespace Seleno
                 .InputPassword("Exchange!6")
                 .BootUp();
 
-            Thread.Sleep(3000);
+            Thread.Sleep(3000);            
         }
     }
 }
