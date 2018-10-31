@@ -23,6 +23,8 @@ namespace Seleno
                 .BootUp()
                 .GoToProdCatPage();
 
+            Assert.That(page.Title, Is.EqualTo("Product Catalogue | Authenticate"));
+
         }
     }
 }
