@@ -8,13 +8,11 @@ using TestStack.Seleno.PageObjects.Locators;
 
 namespace Seleno
 {
-    public class ProdCatPage : Page 
+    public class MenuBar : UiComponent
     {
-        public MenuBar MenuBar
+        public string NetworkLink
         {
-            get { return GetComponent<MenuBar>(); }
+            get { return Find.Element(By.Id("sel-network")).Text; }
         }
     }
-
-
 }

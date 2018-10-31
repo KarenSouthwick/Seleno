@@ -24,6 +24,7 @@ namespace Seleno
                 .GoToProdCatPage();
 
             Assert.That(page.Title, Is.EqualTo("Product Catalogue | Authenticate"));
+            Assert.That(page.MenuBar.NetworkLink, Is.EqualTo("Network"));
 
         }
     }
