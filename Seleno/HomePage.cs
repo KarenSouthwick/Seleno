@@ -5,9 +5,9 @@ namespace Seleno
 {
     public class HomePage : Page
     {
-        public LogInPage GoToLogInPage()
+        public ProdCatPage GoToProdCatPage()
         {
-            return Navigate.To<LogInPage>(By.CssSelector("input[type='submit']"));
+            return Navigate.To<ProdCatPage>(By.Id("sel-productCatalogueLink"));
         }
         
     }
