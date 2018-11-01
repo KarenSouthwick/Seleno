@@ -88,7 +88,6 @@
     <Compile Include="HomePage.cs" />
     <Compile Include="LogInPage.cs" />
     <Compile Include="MenuBar.cs" />
-    <Compile Include="ObjectMethod.cs" />
     <Compile Include="ObjectMother.cs" />
     <Compile Include="ProdCatPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
