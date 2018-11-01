@@ -14,6 +14,11 @@ namespace Seleno
         {
             get { return GetComponent<MenuBar>(); }
         }
+
+        public CreateCatPage AddCat()
+        {
+            return Navigate.To<CreateCatPage>(By.LinkText("add category"));
+        }
     }
 
 
